@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ravi</title>
+  </head>
+  <body>
+    <h1>Ravi teja</h1>
+    <img id='img' src="1.jpg" alt="">
+    <p id='change'> Yes ,I am a gay</p>
+    <button id="Btn">Next Favorite Item</button>
+    <script type="text/javascript">
+        var x =1;
+        const render = [
+          {
+            source : '1.jpg',
+            text : 'I am gay'
+          },
+          {
+            source : '2.jpg',
+            text : 'I sometimes like these sometimes not'
+          },
+          {
+            source: '3.jpg',
+            text : 'This definitely is not my favorite animal'
+          }
+        ]
+    document.getElementById("Btn").addEventListener("click", doit);
+    function doit() {
+      if(x==3){
+        x = 0;
+      }
+      document.getElementById("img").src = render[x].source;
+      document.getElementById("change").innerHTML = render[x].text;
+      x++;
+  }
+    </script>
+  </body>
+</html>
